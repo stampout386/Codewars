@@ -70,3 +70,27 @@ function list(names) {
 }
 
 list(names);
+
+function digital_root(n) {
+    let arr = String(n).split('');
+    let sum = 0;
+    arr.map((item) => (sum += Number(item)));
+    if (sum > 10) {
+        digital_root(sum);
+    } else {
+        console.log(sum);
+        return sum;
+    }
+}
+
+digital_root(493193);
+
+function digital_root2(n) {
+    let result = 0;
+    String(n)
+        .split('')
+        .map((num) => {
+            result += Number(num);
+        });
+    return result >= 10 ? digital_root(result) : result;
+}
