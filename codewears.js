@@ -53,7 +53,20 @@ function pigIt(str) {
         })
         .join(' ');
 }
+let names = [{name: 'Bart'}, {name: 'Lisa'}, {name: 'Maggie'}];
 
-pigIt(str);
-pigIt(str2);
-pigIt(str3);
+function list(names) {
+    let str = '';
+    for (let i = 0; i < names.length; i++) {
+        if (names[i].name === names[names.length - 1].name) {
+            str += `${names[i].name}`;
+        } else if (names[i].name === names[names.length - 2].name) {
+            str += `${names[i].name} & `;
+        } else {
+            str += `${names[i].name}, `;
+        }
+    }
+    return str;
+}
+
+list(names);
