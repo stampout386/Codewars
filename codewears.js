@@ -42,16 +42,16 @@ let str2 = 'Hello world !';
 let str3 = 'О tempora о mores';
 
 function pigIt(str) {
-    let newStr = str.split(' ');
-    let arrStr = newStr.map((item) => {
-        if (Array.isArray(item.match(/\w/))) {
-            let newItem = item.slice(1, item.length) + item[0] + 'ay';
-            console.log(newItem);
-            return newItem;
-        }
-    });
-    console.log(arrStr.join(' '));
-    return arrStr.join(' ');
+    return str
+        .split(' ')
+        .map((item) => {
+            if (!item.match(/^[.,:!?]/)) {
+                item = item + item[0] + 'ay';
+                item = item.slice(1);
+            }
+            return item;
+        })
+        .join(' ');
 }
 
 pigIt(str);
