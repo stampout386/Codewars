@@ -83,7 +83,7 @@ function digital_root(n) {
     }
 }
 
-digital_root(493193);
+// digital_root(493193);
 
 function digital_root2(n) {
     let result = 0;
@@ -94,3 +94,27 @@ function digital_root2(n) {
         });
     return result >= 10 ? digital_root(result) : result;
 }
+
+let dna = 'ATTGC';
+
+function DNAStrand(dna) {
+    let arr = dna.split('');
+    console.log(arr);
+    let arr2 = arr.map((item) => {
+        if (item === 'A') {
+            return 'T';
+        }
+        if (item === 'T') {
+            return 'A';
+        }
+        if (item === 'C') {
+            return 'G';
+        }
+        if (item === 'G') {
+            return 'C';
+        }
+    });
+    return arr2.join('');
+}
+
+DNAStrand(dna);
