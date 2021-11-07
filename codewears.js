@@ -36,3 +36,24 @@ function findUnique2(numbers) {
 }
 
 findUnique2(arr);
+
+let str = 'Pig latin is cool';
+let str2 = 'Hello world !';
+let str3 = 'О tempora о mores';
+
+function pigIt(str) {
+    let newStr = str.split(' ');
+    let arrStr = newStr.map((item) => {
+        if (Array.isArray(item.match(/\w/))) {
+            let newItem = item.slice(1, item.length) + item[0] + 'ay';
+            console.log(newItem);
+            return newItem;
+        }
+    });
+    console.log(arrStr.join(' '));
+    return arrStr.join(' ');
+}
+
+pigIt(str);
+pigIt(str2);
+pigIt(str3);
