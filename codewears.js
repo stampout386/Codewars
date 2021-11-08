@@ -188,4 +188,35 @@ var moveZeros = function (arr) {
     return newArr;
 };
 
-moveZeros(arr123);
+let domainName1 = 'http://github.com/carbonfive/raygun';
+let domainName2 = 'http://www.zombie-bites.com';
+let domainName3 = 'https://youtube.com';
+
+function domainName(url) {
+    if (url.includes('www.')) {
+        let index1 = url.indexOf('www.') + 4;
+        let index2 = url.lastIndexOf('.');
+        let a = url.slice(index1, index2);
+        console.log(url.slice(index1, index2));
+        return a;
+    } else if (url.includes('http://')) {
+        let index1 = url.indexOf('http://') + 7;
+        let index2 = url.indexOf('.');
+        let a = url.slice(index1, index2);
+        console.log(url.slice(index1, index2));
+        return a;
+    } else if (!url.includes('http://')) {
+        let index1 = url.indexOf('https://') + 8;
+        let index2 = url.indexOf('.');
+        let a = url.slice(index1, index2);
+        console.log(url.slice(index1, index2));
+        return a;
+    }
+}
+domainName(domainName3);
+// domainName(domainName1);
+// domainName(domainName2);
+
+function dN(url) {
+    return url.replace(/.+\/\/|www.|\..+/g, '');
+}
