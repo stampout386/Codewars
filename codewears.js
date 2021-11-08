@@ -147,3 +147,45 @@ function sumIntervals(intervals) {
     }
     return result;
 }
+let arrNull = [false, 1, 0, 1, 2, 0, 1, 3, 'a'];
+let arr123 = [
+    'a',
+    'b',
+    null,
+    'c',
+    'd',
+    1,
+    false,
+    1,
+    3,
+    1,
+    9,
+    {},
+    9,
+    0,
+    0,
+    0,
+    0,
+    0,
+    [],
+    0,
+    0,
+    0,
+    0,
+    0,
+];
+var moveZeros = function (arr) {
+    let newArr = [];
+    let nullArr = [];
+    arr.forEach((item) => {
+        if (item === 0) {
+            nullArr.push(item);
+        } else {
+            newArr.push(item);
+        }
+    });
+    nullArr.forEach((item) => newArr.push(item));
+    return newArr;
+};
+
+moveZeros(arr123);
