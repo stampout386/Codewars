@@ -220,3 +220,38 @@ domainName(domainName3);
 function dN(url) {
     return url.replace(/.+\/\/|www.|\..+/g, '');
 }
+
+function tribonacci(signature, n) {
+    function trib(arr, n, b) {
+        for (let i = b; i < arr.length; i++) {
+            let nextNum = arr[i] + arr[i + 1] + arr[i + 2];
+            arr.push(nextNum);
+            if (arr.length === n) {
+                console.log(arr);
+                return arr;
+            } else {
+                b++;
+                trib(arr, n, b);
+            }
+        }
+    }
+    if (n === 0) {
+        return [];
+    } else {
+        let b = 0;
+        let arr = [...signature];
+        trib(arr, n, b);
+    }
+}
+
+tribonacci([1, 1, 1], 10);
+// tribonacci([0.5, 0.5, 0.5], 30);
+
+//Tribonacci Sequence
+function tribonacci(signature, n) {
+    let trib = signature;
+    for (i = 3; i < n; i++) {
+        trib.push(trib[i - 1] + trib[i - 2] + trib[i - 3]);
+    }
+    return trib.slice(0, n);
+}
