@@ -271,3 +271,17 @@ console.log(arr222[0] * arr222[1]);
 function disemvowel(str) {
     return str.replace(/[aeiou]/gi, '');
 }
+
+function search(budget, prices) {
+    let shops = [];
+    prices.map((item) => {
+        if (item <= budget) {
+            shops.push(item);
+        }
+    });
+    shops.sort(function (a, b) {
+        return a - b;
+    });
+    return String(shops);
+}
+search(3, [6, 1, 2, 9, 2]);
