@@ -255,3 +255,19 @@ function tribonacci(signature, n) {
     }
     return trib.slice(0, n);
 }
+
+function persistence(num) {
+    let count = 0;
+    let num1 = num;
+    function per(num1) {
+        let arr = String(num1).split(',');
+    }
+}
+let n = String(24);
+console.log(n.split(''));
+let arr222 = n.split('');
+console.log(arr222[0] * arr222[1]);
+
+function disemvowel(str) {
+    return str.replace(/[aeiou]/gi, '');
+}
