@@ -285,3 +285,10 @@ function search(budget, prices) {
     return String(shops);
 }
 search(3, [6, 1, 2, 9, 2]);
+
+function abbrevName(name) {
+    let arr = name.split(' ');
+    return `${arr[0][0].toUpperCase()}.${arr[1][0].toUpperCase()}`;
+}
+
+abbrevName('Evan Cole');
