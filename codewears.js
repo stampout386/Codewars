@@ -293,4 +293,10 @@ function abbrevName(name) {
 
 abbrevName('Evan Cole');
 
+function adder(a,b) {
+    console.log(a+b);
+    return a+b;
+}
+
+adder(5,5);
 
