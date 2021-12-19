@@ -317,3 +317,21 @@ function finalGrade(exam, projects) {
 
 console.log(finalGrade(100, 12))
 
+function bmi(weight, height) {
+	let dmi = weight / (height * height)
+	if (dmi <= 18.5) {
+		return "Underweight"
+	}
+	if (dmi <= 25) {
+		return "Normal"
+	}
+	if (dmi <= 30) {
+		return "Overweight"
+	}
+	if (dmi > 30) {
+		return "Obese"
+	}
+}
+
+console.log(bmi(80, 1.8))
+
