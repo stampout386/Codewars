@@ -336,9 +336,22 @@ function bmi(weight, height) {
 console.log(bmi(80, 1.8))
 
 function paperwork(n, m) {
-	if(n<0 || m < 0){
+	if (n < 0 || m < 0) {
 		return 0
 	} else {
-		return n*m
+		return n * m
 	}
 }
+function remainder(a, b){
+
+	if (a > b && b ===0){
+		return NaN
+	}
+	else if (b > a && a===0){
+		return NaN
+	}
+	return (a>b)? a % b : b % a;
+
+}
+
+console.log(remainder(0, 0))
