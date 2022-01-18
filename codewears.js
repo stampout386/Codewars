@@ -369,3 +369,14 @@ n.name //Expected: John Doe
 
 console.log(n)
 
+const Person = function () {
+	const person = {
+		_name: "Leroy",
+		_friends: [],
+		fillFriends(f) {
+			this._friends = f
+		}
+	};
+	return person;
+};
+
