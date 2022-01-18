@@ -342,16 +342,30 @@ function paperwork(n, m) {
 		return n * m
 	}
 }
-function remainder(a, b){
 
-	if (a > b && b ===0){
+function remainder(a, b) {
+
+	if (a > b && b === 0) {
+		return NaN
+	} else if (b > a && a === 0) {
 		return NaN
 	}
-	else if (b > a && a===0){
-		return NaN
-	}
-	return (a>b)? a % b : b % a;
+	return (a > b) ? a % b : b % a;
 
 }
 
 console.log(remainder(0, 0))
+
+function NameMe(first, last) {
+	this.firstName = first;
+	this.lastName = last;
+	return {name: this.firstName + ' ' + this.lastName};
+}
+
+let n = new NameMe('John', 'Doe');
+n.firstName //Expected: John
+n.lastName //Expected: Doe
+n.name //Expected: John Doe
+
+console.log(n)
+
